@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
+    rgb(var(--background-start-rgb));
+  font-family: 'Bricolage Grotesque', sans-serif !important;
+}
+
+.mainstack-cron {
+  position: relative;
+}
+
+.mainstack-cron__details {
+  padding-top: 0px !important;
+}
+.mainstack-cron__details--tz {
+  flex-direction: column;
+  align-items: flex-start !important;
+  padding: 0px !important;
+}
+.mainstack-cron__details--duration {
+  display: none;
+}
+.mainstack-cron__calendar-loading {
+  opacity: 0;
+  margin-top: 0 !important;
+  display: none !important;
+}
+.mainstack-cron__details--tz,
+.mainstack-cron__timezone-selector {
+  width: 100%;
+}
+.mainstack-cron__calendar-grid--button {
+  padding: 0px;
+}
+.mainstack-cron__calendar-grid--row {
+  color: #56616b;
+}
+.mainstack-cron__calendar-grid--week-day {
+  font-weight: 400 !important;
+}
+.mainstack-cron__calendar-grid--prevnext {
+  opacity: 0.5;
+  color: #56616b !important;
+}
+
+.mainstack-cron__calendar-header--title,
+.mainstack-cron__confirm-details--info {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+  letter-spacing: -0.16px;
+  margin: 0 !important;
+}
+.mainstack-cron__calendar-header {
+  height: auto !important;
+  align-items: center !important;
+}
+.mainstack-cron__calendar-header-button--icon {
+  width: 12px !important;
+  height: 12px !important;
+  fill: #131316 !important;
+}
+.mainstack-cron__column--left {
+  border-radius: 12px;
+  border: 1px solid #eff1f6;
+  padding: 1.25rem !important;
+  flex-basis: calc(65% - 12px) !important;
+  margin-right: 12px !important;
+  max-height: 530px;
+}
+.mainstack-cron__column--right {
+  border-radius: 12px;
+  border: 1px solid #eff1f6;
+  padding: 16px !important;
+  flex-basis: calc(35% - 12px) !important;
+  margin-left: 12px !important;
+  height: 530px;
+  overflow-y: auto;
+}
+.mainstack-cron__calendar-header-button:nth-child(1) {
+  display: flex !important;
+  justify-content: flex-end;
+}
+.mainstack-cron__calendar-header {
+  margin-bottom: 17px !important;
+}
+.mainstack-cron__details--tz-label,
+.mainstack-cron__details--tz-label strong {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  letter-spacing: -0.064px !important;
+  font-family: inherit;
+}
+.mainstack-cron__timezone-selector--button {
+  border-radius: 12px !important;
+  border: 1px solid #eff1f6 !important;
+  padding: 12px 16px !important;
+}
+.mainstack-cron .mainstack-cron__timezone-selector--button:hover,
+.mainstack-cron .mainstack-cron__timezone-selector--focused,
+.mainstack-cron .mainstack-cron__timezone-selector--button:focus,
+.mainstack-cron .mainstack-cron__timezone-selector--button:focus {
+  background-color: #eff1f6 !important;
+  border: 1px solid #eff1f6 !important;
+  box-shadow: none !important;
+}
+.mainstack-cron .mainstack-cron__calendar-header-button:hover,
+.mainstack-cron .mainstack-cron__calendar-header-button:focus {
+  background-color: none !important;
+  border-color: none !important;
+  box-shadow: none !important;
+}
+
+.mainstack-cron .mainstack-cron__button:hover,
+.mainstack-cron .mainstack-cron__time-slot--selected:hover,
+.mainstack-cron .mainstack-cron__time-slot:hover,
+.mainstack-cron .mainstack-cron__calendar-grid--button:hover,
+.mainstack-cron .mainstack-cron__button:focus,
+.mainstack-cron .mainstack-cron__time-slot--selected:focus,
+.mainstack-cron .mainstack-cron__time-slot:focus,
+.mainstack-cron .mainstack-cron__calendar-grid--button:focus {
+  border-color: var(--booking-custom-color) !important;
+  box-shadow: none !important;
+  background-color: var(--booking-custom-color) !important;
+  color: #fff !important;
+}
+
+.mainstack-cron .mainstack-cron__timezone-selector--option:hover,
+.mainstack-cron .mainstack-cron__timezone-selector--selected {
+  background-color: #eff1f6 !important;
+  color: #131316 !important;
+}
+.mainstack-cron .mainstack-cron__calendar-grid--button {
+  padding: 0px !important;
+  color: #131316 !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  margin: 9px 6px;
+}
+
+.mainstack-cron .mainstack-cron__calendar-grid--selected {
+  font-weight: bold;
+  background-color: var(--booking-custom-color) !important;
+  border-radius: 50% !important;
+}
+
+.mainstack-cron .mainstack-cron__calendar-grid--focused {
+  border-color: var(--booking-custom-color) !important;
+  box-shadow: none !important;
+  background-color: var(--booking-custom-color) !important;
+  color: #fff !important;
+}
+
+.mainstack-cron .mainstack-cron__time-slots-list--header {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+  letter-spacing: -0.16px !important;
+  /* margin: .5em 0; */
+  text-align: left !important;
+}
+
+.mainstack-cron .mainstack-cron__time-slot {
+  border: 1px solid #eff1f6 !important;
+  /* padding: .75em 0; */
+  /* width: 100%;
+	height: 3em; */
+  border-radius: 30px !important;
+  outline: none !important;
+}
+.mainstack-cron .mainstack-cron__button:active,
+.mainstack-cron .mainstack-cron__timezone-selector--button:active,
+.mainstack-cron .mainstack-cron__time-slot--selected:active,
+.mainstack-cron .mainstack-cron__time-slot:active,
+.mainstack-cron .mainstack-cron__calendar-grid--button:active,
+.mainstack-cron .mainstack-cron__calendar-header-button:active {
+  background-color: #fff;
+  color: var(--booking-custom-color) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.mainstack-cron__button {
+  outline: none !important;
+}
+.mainstack-cron__cancel-button {
+  background: #e6e9ef !important;
+  color: #31373d !important;
+  border: none !important;
+  border-radius: 30px !important;
+  width: 100%;
+  box-shadow: none !important;
+}
+.mainstack-cron__confirm-button,
+.mainstack-cron__confirm-button:hover,
+.mainstack-cron__confirm-button:focus {
+  border-radius: 30px !important;
+  border: none !important;
+  border-radius: 30px;
+  background: var(--booking-custom-color) !important;
+  color: #ffffff !important;
+  width: 100%;
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .mainstack-cron__column--left {
+    padding: 20px 16px !important;
+    margin-right: 0px !important;
+  }
+
+  .mainstack-cron__column--right {
+    margin-left: 0px !important;
+  }
+  .mainstack-cron__wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .mainstack-cron__details {
+    position: static;
+    bottom: -124px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.Toastify__toast-container {
+  width: auto !important;
+}
+
+.Toastify__toast {
+  padding: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.Toastify__toast-body {
+  background: unset !important;
+  padding: 0;
+}
+
+.Toastify__toast-theme--light {
+  background: unset !important;
+}
+
+.ms-spinner svg {
+  -webkit-animation: loading-rotate 2s linear infinite;
+  -moz-animation: loading-rotate 2s linear infinite;
+  -o-animation: loading-rotate 2s linear infinite;
+  animation: loading-rotate 2s linear infinite;
+  height: 50px;
+  width: 50px;
+}
+
+.ms-spinner .path {
+  stroke-dasharray: 90, 150;
+  stroke-dashoffset: 0;
+  stroke-width: 5;
+  stroke: #131316;
+  stroke-linecap: round;
+  -webkit-animation: loading-dash 1.5s ease-in-out infinite;
+  -moz-animation: loading-dash 1.5s ease-in-out infinite;
+  -o-animation: loading-dash 1.5s ease-in-out infinite;
+  animation: loading-dash 1.5s ease-in-out infinite;
+}
+
+.markdown_view a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.error {
+  color: #cc003a;
+}
+
+.DTP .DTP__timezone-selector--listbox-wrapper {
+  border: 1px solid #eff1f6 !important;
+}
+
+.DTP {
+  min-width: 600px;
+}

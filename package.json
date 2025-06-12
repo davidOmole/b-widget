@@ -1,0 +1,80 @@
+{
+  "name": "mainstack-bookings-widget",
+  "version": "1.0.0",
+  "description": "A customizable booking widget from Mainstack",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./index.d.ts"
+    },
+    "./dist/embed.js": "./dist/embed.js"
+  },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:widget": "tsc && vite build && cp -r dist/* ../bookings-public/public/widget/",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "start": "node start.js"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@tanstack/react-query": "^5.20.5",
+    "@tanstack/react-query-devtools": "^5.20.5",
+    "@types/uuid": "^10.0.0",
+    "cronofy-elements": "^1.64.0",
+    "formik": "^2.4.6",
+    "framer-motion": "^11.0.5",
+    "luxon": "^3.6.1",
+    "mainstack-design-system": "^0.7.31",
+    "mainstack-payments": "^1.0.40",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.1",
+    "serve": "^14.2.4",
+    "uuid": "^11.1.0",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.6.2",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
